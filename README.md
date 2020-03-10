@@ -80,19 +80,3 @@ level1～4是由level5转码而来
 |   4   |     12.2       |  640*480    |   ![level4-118-128-48](img/level4/48.jpeg)     |
 |   5   |     30.0       | 1280*720     |   ![level5-118-128-48](img/level5/48.jpeg)     |
  
-
-- level1 :
-<br>
-![level1-118-128-48](img/level1/48.jpeg)
-- level2:
-<br>
-![level2-118-128-48](img/level2/48.jpeg)
-- level3:
-<br>
-![level3-118-128-48](img/level3/48.jpeg)
-- level4:
-<br>
-![level4-118-128-48](img/level4/48.jpeg)
-- level5:
-<br>
-![level5-118-128-48](img/level5/48.jpeg)
