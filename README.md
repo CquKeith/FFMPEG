@@ -68,3 +68,31 @@ level1～4是由level5转码而来
 |   5   |                   459.4                    |  7297.6  |   7322.1   |
 
 ![image-20200309175819972](./img/size.png)
+
+### 截图
+- 来源：chunk：118-120.avi的最后一帧
+
+| level |  size（KB） | resolution | image |
+| :---: | :----------------------------------------: | :------: | :--------: |
+|   1   |     1.9         |  192*144    |  ![level1-118-128-48](img/level1/48.jpeg)      |
+|   2   |   4.1          |  320*240    |  ![level2-118-128-48](img/level2/48.jpeg)   |
+|   3   |    7.86        |   480*360   |   ![level3-118-128-48](img/level3/48.jpeg)  |
+|   4   |     12.2       |  640*480    |   ![level4-118-128-48](img/level4/48.jpeg)     |
+|   5   |     30.0       | 1280*720     |   ![level5-118-128-48](img/level5/48.jpeg)     |
+ 
+
+- level1 :
+<br>
+![level1-118-128-48](img/level1/48.jpeg)
+- level2:
+<br>
+![level2-118-128-48](img/level2/48.jpeg)
+- level3:
+<br>
+![level3-118-128-48](img/level3/48.jpeg)
+- level4:
+<br>
+![level4-118-128-48](img/level4/48.jpeg)
+- level5:
+<br>
+![level5-118-128-48](img/level5/48.jpeg)

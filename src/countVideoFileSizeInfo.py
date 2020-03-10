@@ -77,7 +77,7 @@ def main():
     plt.ylabel('chunk size(KB)')
     plt.show()
 
-    plt.savefig('size.png',dpi=900)
+    plt.savefig('../img/size.png',dpi=900)
 
 if __name__ == '__main__':
     main()
