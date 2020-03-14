@@ -18,8 +18,8 @@
   - available：http://ffmpeg.org
 - video source
   - available：http://www.bigbuckbunny.org
-  - big_buck_bunny_1080p_surround 24fps
-- windows（in VM fusion）
+  - [big_buck_bunny_1080p_surround](http://mirrorblender.top-ix.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_surround.avi) 1920*1080 (16:9) 12.0Mbps 24fps
+- windows (in VM fusion)
   - version：win10 64bits
   - CPU：Intel(R) Core(TM) i5-5257U CPU@2.7Hz @2.7Hz
   - memory：2G
@@ -30,13 +30,13 @@
 
 ### 视频质量
 
-| quality level | bitrate(bps) | resolution |
-| :-----------: | :----------: | :--------: |
-|       1       |     100K     |  192*144   |
-|       2       |     300K     |  320*240   |
-|       3       |     600K     |  480*360   |
-|       4       |     900K     |  640*480   |
-|       5       |    1500K     |  1280*720  |
+| quality level | bitrate(bps) | resolution (copy) |
+| :-----------: | :----------: | :---------------: |
+|       1       |     100K     |     1920*1280     |
+|       2       |     300K     |     1920*1280     |
+|       3       |     600K     |     1920*1280     |
+|       4       |     900K     |     1920*1280     |
+|       5       |    1500K     |     1920*1280     |
 
 ### 转码时间
 
@@ -79,4 +79,4 @@ level1～4是由level5转码而来
 |   3   |    7.86        |   480*360   |   ![level3-118-128-48](img/level3/48.jpeg)  |
 |   4   |     12.2       |  640*480    |   ![level4-118-128-48](img/level4/48.jpeg)     |
 |   5   |     30.0       | 1280*720     |   ![level5-118-128-48](img/level5/48.jpeg)     |
- 
+
