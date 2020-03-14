@@ -5,7 +5,6 @@ import os
 import subprocess
 import time
 from Chunk_quality_level_enum import *
-import ffmpeg.video as video
 
 
 def trans_chunks_code_to_low_level(input_dir, current_level):
