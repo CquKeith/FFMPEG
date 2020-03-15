@@ -17,7 +17,7 @@ def trans_chunks_code_to_low_level(input_dir, current_level):
     '''
     create_record_csv = open("../video/level %s to lower level.csv" % current_level, "w", newline='')
     csv_write = csv.writer(create_record_csv)
-    headers = ["des level", "start_time", "end_time", "time（s）"]
+    headers = ["des level", "start_time", "end_time", "time (s)"]
     csv_write.writerow(headers)
     for i in range(current_level - 1, 0, -1):
         out_dir = input_dir + "/level%s" % i
@@ -25,7 +25,7 @@ def trans_chunks_code_to_low_level(input_dir, current_level):
         start_time = time.time()
         transcode_from_levlm_to_leveln(src_dir=input_dir, level_m=current_level, level_n=i, out_dir=out_dir)
         end_time = time.time()
-        csv_write.writerow([i, start_time, end_time, end_time - start_time])
+        csv_write.writerow([i, start_time, end_time, round(end_time - start_time,2)])
 
     create_record_csv.close()
 

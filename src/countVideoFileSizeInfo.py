@@ -53,14 +53,13 @@ def format_file_size(size):
     '''
     KB = size / 1024
     MB = KB / 1024
-    return round(MB,2)
+    return round(MB, 2)
 
 
 def format_bit_rate(bit_rate):
-
     Kbps = bit_rate / 1000
     Mbps = Kbps / 1000
-    return round(Mbps,2)
+    return round(Mbps, 2)
 
 
 def parse_video_info_json(json_obj):
@@ -72,10 +71,11 @@ def parse_video_info_json(json_obj):
         bit_rate = eval(json_obj['format']['bit_rate'])
         formatted_size = format_file_size(size)
         formatted_bit_rate = format_bit_rate(bit_rate)
-        print('%s s, %s MB, %s Mbps' %(duration, formatted_size, formatted_bit_rate))
+        print('%s s, %s MB, %s Mbps' % (duration, formatted_size, formatted_bit_rate))
         return duration, formatted_size, formatted_bit_rate
     except Exception:
         print(str(json_obj))
+
 
 def draw_chunk_size(chunks_start_seconds, chunk_size_list, level):
     '''
@@ -122,7 +122,7 @@ def statics_chunks_info(chunks_dir):
     duration_list = []
     chunk_size_list = []
     chunk_bit_rate_list = []
-    x = [i+1 for i in range(len(chunks_file_path))]
+    x = [i + 1 for i in range(len(chunks_file_path))]
     for file_path in chunks_file_path:
         duration, size, bit_rate = get_video_info(file_path)
         duration_list.append(duration)
@@ -136,7 +136,6 @@ def statics_chunks_info(chunks_dir):
     plot_my_figure(x=x, y=chunk_bit_rate_list, title='chunk bitrate(Mbps)')
 
 
-
 def plot_chunk_size_of_diffent_level():
     # 开始画图
     # sub_axix = filter(lambda x: x % 200 == 0, x_axix)
@@ -148,7 +147,7 @@ def plot_chunk_size_of_diffent_level():
         csv_writer.writerow(headers)
         for level in range(1, 6):
             avg, var, cov, chunk_size_list, chunk_start_seconds = count_chunks_size("../video/level%s" % level)
-            csv_writer.writerow([level, avg, var, cov])
+            csv_writer.writerow([level, round(avg,2), round(var,2), cov])
             # draw_chunk_size(chunk_start_seconds,chunk_size_list,i)
             plt.plot(chunk_start_seconds, chunk_size_list, color=plot_level_color[level - 1], label='level %s' % level)
 
@@ -158,13 +157,12 @@ def plot_chunk_size_of_diffent_level():
     plt.ylabel('chunk size(KB)')
     plt.show()
 
-    plt.savefig('../img/size.png', dpi=900)
+    # plt.savefig('../img/size.png', dpi=900)
 
 
 def main():
-
-    # plot_chunk_size_of_diffent_level()
-    statics_chunks_info('../video/levelsrc')
+    plot_chunk_size_of_diffent_level()
+    # statics_chunks_info('../video/levelsrc')
 
 
 if __name__ == '__main__':
