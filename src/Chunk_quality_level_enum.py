@@ -12,11 +12,11 @@ def get_height_by_level(level):
 
 class QualityLevel():
     # bitrates kbps
-    BIT_RATEE_LEVEL_5 = 1500
-    BIT_RATEE_LEVEL_4 = 900
-    BIT_RATEE_LEVEL_3 = 600
-    BIT_RATEE_LEVEL_2 = 300
-    BIT_RATEE_LEVEL_1 = 100
+    BIT_RATEE_LEVEL_5 = 2500
+    BIT_RATEE_LEVEL_4 = 2000
+    BIT_RATEE_LEVEL_3 = 1500
+    BIT_RATEE_LEVEL_2 = 1000
+    BIT_RATEE_LEVEL_1 = 500
     BIT_RATE = [0, BIT_RATEE_LEVEL_1, BIT_RATEE_LEVEL_2, BIT_RATEE_LEVEL_3, BIT_RATEE_LEVEL_4, BIT_RATEE_LEVEL_5]
 
     # resolution width

@@ -161,8 +161,8 @@ def plot_chunk_size_of_diffent_level():
 
 
 def main():
-    plot_chunk_size_of_diffent_level()
-    # statics_chunks_info('../video/levelsrc')
+    # plot_chunk_size_of_diffent_level()
+    statics_chunks_info('../video/level5')
 
 
 if __name__ == '__main__':

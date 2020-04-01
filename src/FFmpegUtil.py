@@ -43,7 +43,7 @@ def transcode_from_levlm_to_leveln(src_dir, level_m, level_n, out_dir):
     height = get_height_by_level(level_n)
     for root, dirs, files in os.walk(src_dir):
         for file in files:
-            cmd = "ffmpeg -y -i %s -b:v %sk -bt 100K  -qscale 1 -acodec copy  %s" % (
+            cmd = "ffmpeg -y -i %s -b:v %sk   -acodec copy  %s" % (
                 src_dir + '/' + file, rate, out_dir + '/' + file)
             run_command(cmd)
 
@@ -69,9 +69,9 @@ def trans_video_code(input_file, width, height, rate, out_file):
     '''
     # 比特率最大误差 100kbps
     max_divation = 100
-    cmd = "ffmpeg -y -i %s -b:v %sK -bt 100K  -qscale 1  -acodec copy %s" % (
+    cmd = "ffmpeg -y -i %s -b:v %sK -bufsize 2500K -bt 100k -acodec copy %s" % (
         input_file, rate, out_file)
-
+    print(cmd)
     return run_command(cmd)
 
 
@@ -88,7 +88,7 @@ def cutting_video_to_chunks(input_file, chunk_size, level):
     make_dirs_if_not_exists(dir)
     for left in range(0, 596, chunk_size):
         out_file = "%s/%s-%s.avi" % (dir, left, left + chunk_size)
-        cmd = "ffmpeg -y -i %s -ss %s -t %s -acodec copy -bt 100K  -qscale 1   %s" % (
+        cmd = "ffmpeg -y -i %s -ss %s -t %s -acodec copy -bt 100K  %s" % (
             input_file, left, chunk_size, out_file)
         res = run_command(cmd)
         if not res:

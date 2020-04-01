@@ -1,16 +1,19 @@
 # -- coding: utf-8 --
 # test level5 transcode to level4
 
-from FFmpegUtil import *
+from countVideoFileSizeInfo import statics_chunks_info
+from cuttingVideo import trancode_src_video_to_level5_and_cut_to_chunks
+from main import remove_old_dir
+
+# src to level 1
+# ffmpeg -y -i ../../1080p_24fps/big_buck_bunny_1080p_surround.avi -c:v libx264 -x264-params "nal-hrd=cbr:f
+# orce-cfr=1" -b:v 500K -minrate 500K -maxrate 500K  ../video/level1.ts
+# size
 
 def main():
-    # 1. 将原视频转成level5的视频 level5.avi
-    trans_video_code(input_file="../../1080p_24fps/big_buck_bunny_1080p_surround.avi",
-                     width=QualityLevel.WIDTH_LEVEL_5,
-                     height=QualityLevel.HEIGHT_LEVEL_5,
-                     rate=QualityLevel.BIT_RATEE_LEVEL_5,
-                     out_file="../video/level5.avi")
-
+    remove_old_dir()
+    trancode_src_video_to_level5_and_cut_to_chunks()
+    statics_chunks_info('../video/level5')
 
 if __name__ == '__main__':
     main()
